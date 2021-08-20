@@ -30,10 +30,12 @@ function promoCode() {
   let totalPrice = 0;
   if (promoInput == 'stevekaku') {
     totalPrice = totalAmount - totalAmount * 0.2;
+    document.getElementById('promo-input').value = '';
   } else {
     totalPrice = totalAmount;
   }
   document.getElementById('total-price').innerText = totalPrice;
+  
 }
 
 /* ----------------------------------event Listener for extra memory cost----------------------------------- */
@@ -68,4 +70,5 @@ document.getElementById('delivery-paid').addEventListener('click', function () {
 
 document.getElementById('promo-btn').addEventListener('click', function () {
   promoCode();
+  
 });
